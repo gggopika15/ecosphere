@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Planet Paradise 🌍</title>
+<style>
+*{box-sizing:border-box;scroll-behavior:smooth}
+
+body{
+ margin:0;
+ font-family:'Trebuchet MS', sans-serif;
+ background:linear-gradient(135deg,#e0f8e8,#d9efff,#f0e4ff);
+ color:#245c48;
+ text-align: center;
+}
+
+header{
+ background:linear-gradient(120deg,#24875d,#79cf96);
+ color:white;padding:40px 15px;
+ border-radius:0 0 35px 35px;
+}
+
+header h1{font-size:42px;margin:5px}
+
+nav{
+ background: white;padding:15px;
+ position:sticky;top:0;z-index:10;
+ box-shadow:0 3px 10px #0002;
+}
+
+nav a{
+ display:inline-block;
+ text-decoration: none;
+ color:#32865a;font-weight:bold;
+ margin:7px;
+}
+
+section{padding:35px 15px;scroll-margin-top:70px}
+
+h2{color:#329668}
+
+.intro{
+ background: white;
+ max-width:850px;
+ margin: auto;
+ padding:25px;
+ border-radius:25px;
+ line-height:1.8;
+}
+
+.container{
+ display: grid;
+ grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+ gap:20px;
+ max-width:1100px;
+ margin: auto;
+}
+
+.card{
+ background: white;
+ padding:22px;
+ border-radius:25px;
+ box-shadow:0 6px 15px #0002;
+ line-height:1.6;
+ transition:.3s;
+}
+
+.card:hover{transform:translateY(-5px)}
+
+.emoji{font-size:45px}
+
+.world{
+ max-width:750px;
+ margin: auto;
+ padding:25px;
+ border:5px solid white;
+ border-radius:30px;
+ background:linear-gradient(#a9e8ff 0%,#e0f8cf 55%,#79c779 56%);
+}
+
+#planet{font-size:75px;animation:float 3s infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+
+#garden{font-size:27px;overflow-wrap:anywhere}
+
+.score{
+ display:inline-block;
+ background: white;
+ padding:15px 30px;
+ border-radius:25px;
+ margin:15px;
+ font-size:20px;
+}
+
+.progress{
+ max-width:400px;
+ width:80%;
+ height:18px;
+ background: white;
+ margin:15px auto;
+ border-radius:20px;
+ overflow: hidden;
+}
+
+#bar{height:100%;width:0;background:#329668;transition:.4s}
+
+button{
+ background:#52b788;
+ color: white;border:0;
+ padding:12px 18px;
+ margin:5px;
+ border-radius:22px;
+ cursor: pointer;font-size:15px;
+}
+
+button:hover{background:#267a53}
+
+.message{min-height:25px;color:#32865a;font-weight:bold}
+
+.quiz-box{
+ max-width:650px;
+ margin: auto;
+ background: white;
+ padding:25px;
+ border-radius:25px;
+}
+
+footer{
+ background:#27865e;
+ color: white;
+ padding:30px;
+ margin-top:30px;
+}
+
+ul{text-align:left;line-height:1.9}
+
+@media(max-width:600px){
+ header h1{font-size:32px}
+ nav a{font-size:13px;margin:4px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🌍 Planet Paradise</h1>
+<p>One Planet • Endless Possibilities 🌱</p>
+<p>Learn • Play • Protect • Repeat 💚</p>
+<div style="font-size:35px">🌳 🦋 🐼 🌸 🐢</div>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#learn">Learn</a>
+<a href="#pollution">Pollution</a>
+<a href="#effects">Effects</a>
+<a href="#solutions">Solutions</a>
+<a href="#games">Games</a>
+<a href="#quiz">Quiz</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+<h2>🌎 Welcome to Planet Paradise!</h2>
+<div class="intro">
+<p>
+Earth is our beautiful home. It gives us air to breathe,
+water to drink, food to eat and a place to live.
+But pollution, deforestation and climate change are
+threatening our planet.
+</p>
+<p>
+Let's learn about environmental problems and discover
+how small actions can create a big difference!
+🌱💚
+</p>
+</div>
+</section>
+
+<!-- LEARNING -->
+<section id="learn">
+<h2>📚 Let's Learn About Our Planet</h2>
+
+<div class="container">
+
+<div class="card">
+<div class="emoji">🌍</div>
+<h3>Environment</h3>
+<p>The environment includes everything around us:
+air, water, land, plants, animals and people.
+It supports all living things.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🌳</div>
+<h3>Importance of Trees</h3>
+<p>Trees absorb carbon dioxide, release oxygen,
+provide homes for animals and help keep
+our surroundings cool.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🐝</div>
+<h3>Biodiversity</h3>
+<p>Biodiversity means the variety of living things
+on Earth, including plants, animals and tiny
+organisms.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🌡️</div>
+<h3>Climate Change</h3>
+<p>Climate change means long-term changes in
+Earth's temperature and weather patterns.
+Human activities contribute to global warming.</p>
+</div>
+
+</div>
+</section>
+
+<!-- POLLUTION -->
+<section id="pollution">
+<h2>🚨 What is Pollution?</h2>
+
+<div class="intro">
+<p>
+Pollution is the introduction of harmful substances
+or energy into our environment. It makes the air,
+water and land dirty and unsafe for living things.
+Pollution can harm humans, animals, plants and
+entire ecosystems.
+</p>
+<p><b>Let's explore the different types of pollution!</b></p>
+</div>
+
+<div class="container" style="margin-top:25px">
+
+<div class="card">
+<div class="emoji">🏭</div>
+<h3>Air Pollution</h3>
+<p>
+Air pollution happens when harmful gases, smoke
+and tiny particles enter the air.
+</p>
+<p><b>Causes:</b> Vehicle exhaust, factories,
+burning fuels and waste.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🌊</div>
+<h3>Water Pollution</h3>
+<p>
+Water pollution occurs when harmful waste
+enters rivers, lakes, seas and oceans.
+</p>
+<p><b>Causes:</b> Plastic waste, sewage,
+oil spills and chemicals.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🗑️</div>
+<h3>Land Pollution</h3>
+<p>
+Land pollution happens when waste and
+harmful chemicals contaminate the soil.
+</p>
+<p><b>Causes:</b> Littering, plastic waste,
+pesticides and industrial waste.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🔊</div>
+<h3>Noise Pollution</h3>
+<p>
+Noise pollution means excessive or disturbing
+sound in our surroundings.
+</p>
+<p><b>Causes:</b> Traffic, aircraft, construction
+and loudspeakers.</p>
+</div>
+
+<div class="card">
+<div class="emoji">💡</div>
+<h3>Light Pollution</h3>
+<p>
+Light pollution happens when excessive
+artificial light brightens the night sky.
+</p>
+<p><b>Causes:</b> Bright streetlights,
+advertisements and buildings.</p>
+</div>
+
+</div>
+</section>
+
+<!-- EFFECTS -->
+<section id="effects">
+<h2>💔 How Does Pollution Affect Our Planet?</h2>
+
+<div class="container">
+
+<div class="card">
+<div class="emoji">🫁</div>
+<h3>Human Health</h3>
+<p>Air pollution can cause breathing problems
+and worsen asthma. Polluted water can spread
+diseases.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🐢</div>
+<h3>Animals</h3>
+<p>Animals may eat plastic or become trapped
+in waste. Pollution can destroy their habitats
+and threaten their survival.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🌱</div>
+<h3>Plants and Soil</h3>
+<p>Harmful chemicals can damage soil quality,
+affect plant growth and contaminate crops.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🌡️</div>
+<h3>Global Warming</h3>
+<p>Greenhouse gases trap heat in the atmosphere.
+This contributes to rising temperatures and
+changing weather patterns.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🐠</div>
+<h3>Ocean Life</h3>
+<p>Plastic and chemical pollution can injure
+marine animals and damage underwater
+ecosystems.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🌧️</div>
+<h3>Natural Environment</h3>
+<p>Pollution can damage ecosystems, reduce
+biodiversity and make natural resources
+unsafe or difficult to use.</p>
+</div>
+
+</div>
+</section>
+
+<!-- SOLUTIONS -->
+<section id="solutions">
+<h2>💚 How Can We Protect Earth?</h2>
+
+<div class="container">
+
+<div class="card">
+<div class="emoji">🌳</div>
+<h3>Plant More Trees</h3>
+<p>Plant trees and protect forests to support
+wildlife and absorb carbon dioxide.</p>
+</div>
+
+<div class="card">
+<div class="emoji">♻️</div>
+<h3>Recycle Waste</h3>
+<p>Separate paper, plastic, glass and metal
+so they can be recycled properly.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🚲</div>
+<h3>Use Green Transport</h3>
+<p>Walk, cycle or use public transport to
+reduce vehicle emissions.</p>
+</div>
+
+<div class="card">
+<div class="emoji">💧</div>
+<h3>Save Water</h3>
+<p>Turn off taps when not needed and
+avoid wasting clean water.</p>
+</div>
+
+<div class="card">
+<div class="emoji">☀️</div>
+<h3>Renewable Energy</h3>
+<p>Use solar and wind energy to reduce
+dependence on fossil fuels.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🛍️</div>
+<h3>Reduce Plastic</h3>
+<p>Carry reusable bags and bottles.
+Avoid unnecessary single-use plastic.</p>
+</div>
+
+</div>
+</section>
+
+<!-- PLANET GAME -->
+<section id="games">
+<h2>🎮 Build Your Own Planet Paradise!</h2>
+<p>Complete activities and earn eco-points!</p>
+
+<div class="score">
+⭐ Eco Points: <span id="points">0</span>
+</div>
+
+<div class="world">
+<div id="planet">🌍</div>
+<h3>Your Little Paradise</h3>
+<div id="garden">🌱</div>
+<p id="worldMessage">Let's make Earth beautiful!</p>
+</div>
+
+<h3>🌿 Planet Health</h3>
+<div class="progress"><div id="bar"></div></div>
+<p id="health">0% Healthy</p>
+
+<div class="container">
+
+<div class="card">
+<div class="emoji">🌳</div>
+<h3>Tree Garden</h3>
+<button onclick="plant()">Plant a Tree</button>
+<p class="message" id="treeMessage"></p>
+</div>
+
+<div class="card">
+<div class="emoji">🌸</div>
+<h3>Flower Garden</h3>
+<button onclick="flower()">Grow Flowers</button>
+<p class="message" id="flowerMessage"></p>
+</div>
+
+<div class="card">
+<div class="emoji">🌊</div>
+<h3>Ocean Rescue</h3>
+<button onclick="clean()">Clean Ocean</button>
+<p class="message" id="oceanMessage"></p>
+</div>
+
+<div class="card">
+<div class="emoji">♻️</div>
+<h3>Recycling Centre</h3>
+<button onclick="recycle()">Recycle Waste</button>
+<p class="message" id="recycleMessage"></p>
+</div>
+
+<div class="card">
+<div class="emoji">🐼</div>
+<h3>Animal Rescue</h3>
+<button onclick="animal()">Help Animals</button>
+<p class="message" id="animalMessage"></p>
+</div>
+
+<div class="card">
+<div class="emoji">☀️</div>
+<h3>Clean Energy</h3>
+<button onclick="energy()">Use Solar Energy</button>
+<p class="message" id="energyMessage"></p>
+</div>
+
+</div>
+
+<div class="card" style="max-width:650px;margin:25px auto">
+<h2>🏆 Eco Achievements</h2>
+<p id="badges">🔒 Complete activities to unlock badges!</p>
+<button onclick="resetGame()">Restart Planet</button>
+</div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz">
+<h2>🧠 Test Your Environmental Knowledge!</h2>
+
+<div class="quiz-box">
+<h3 id="question">1. Which gas do plants absorb?</h3>
+
+<div id="answers">
+<button onclick="answer(0)">Oxygen</button>
+<button onclick="answer(1)">Carbon dioxide</button>
+<button onclick="answer(2)">Nitrogen</button>
+</div>
+
+<p class="message" id="quizMessage"></p>
+<p id="quizScore">Score: 0</p>
+<button onclick="nextQuestion()">Next Question ➡️</button>
+</div>
+</section>
+
+<footer>
+<h2>🌍 Together We Can Save Earth!</h2>
+<p>Small actions today create a better tomorrow.</p>
+<p>💚 Reduce • Reuse • Recycle 💚</p>
+<p>Planet Paradise © 2026</p>
+</footer>
+
+<script>
+
+// PLANET GAME
+
+let points=0;
+let actions=0;
+let trees=0;
+let flowers=0;
+let completed={};
+
+function update(){
+
+let health=Math.min(100,actions*8);
+
+document.getElementById("points").innerText=points;
+document.getElementById("bar").style.width=health+"%";
+document.getElementById("health").innerText=health+"% Healthy";
+
+document.getElementById("planet").innerText=
+health>=80?"🌍✨":health>=40?"🌎🌱":"🌍";
+
+document.getElementById("worldMessage").innerText=
+health>=80?"Your planet is a paradise! 🌈":
+health>=40?"Your planet is getting greener! 🌱":
+"Keep protecting your planet! 💚";
+
+let badges=[];
+
+if(trees>=1)badges.push("🌳 Tree Hero");
+if(flowers>=1)badges.push("🌸 Flower Friend");
+if(completed.ocean)badges.push("🌊 Ocean Guardian");
+if(completed.recycle)badges.push("♻️ Recycling Star");
+if(completed.animal)badges.push("🐼 Animal Protector");
+if(health>=100)badges.push("🌍 Planet Guardian");
+
+document.getElementById("badges").innerText=
+badges.length?badges.join(" | "):"🔒 Unlock your first badge!";
+
+}
+
+function reward(type,amount,id,message){
+if(completed[type])return;
+completed[type]=true;
+points+=amount;
+actions++;
+document.getElementById(id).innerText=message+" +"+amount+" ⭐";
+update();
+}
+
+function plant(){
+trees++;
+document.getElementById("garden").innerText+=" 🌳";
+points+=10;
+actions++;
+document.getElementById("treeMessage").innerText="Tree planted! +10 ⭐";
+update();
+}
+
+function flower(){
+flowers++;
+document.getElementById("garden").innerText+=" 🌸";
+points+=5;
+actions++;
+document.getElementById("flowerMessage").innerText="Beautiful! +5 ⭐";
+update();
+}
+
+function clean(){
+reward("ocean",10,"oceanMessage","Ocean cleaned!");
+}
+
+function recycle(){
+reward("recycle",8,"recycleMessage","Waste recycled!");
+}
+
+function animal(){
+reward("animal",12,"animalMessage","Animals protected!");
+}
+
+function energy(){
+reward("energy",10,"energyMessage","Solar energy activated!");
+}
+
+function resetGame(){
+if(!confirm("Restart your planet?"))return;
+points=0;
+actions=0;
+trees=0;
+flowers=0;
+completed={};
+document.getElementById("garden").innerText="🌱";
+document.querySelectorAll(".message").forEach(e=>e.innerText="");
+update();
+}
+
+// ENVIRONMENT QUIZ
+
+let questions=[
+{
+q:"1. Which gas do plants absorb?",
+a:["Oxygen","Carbon dioxide","Nitrogen"],
+correct:1
+},
+{
+q:"2. Which action helps reduce plastic pollution?",
+a:["Throwing plastic in rivers","Burning plastic","Recycling plastic"],
+correct:2
+},
+{
+q:"3. What is the largest mammal?",
+a:["Elephant","Blue Whale","Giraffe"],
+correct:1
+},
+{
+q:"4. Which is a renewable energy source?",
+a:["Coal","Petrol","Solar energy"],
+correct:2
+},
+{
+q:"5. What should we do to save water?",
+a:["Leave taps running","Turn off unused taps","Waste water"],
+correct:1
+},
+{
+q:"6. What causes air pollution?",
+a:["Vehicle exhaust","Planting trees","Cycling"],
+correct:0
+},
+{
+q:"7. What is biodiversity?",
+a:["Only forests","Variety of living things","Only oceans"],
+correct:1
+},
+{
+q:"8. Which is better for the environment?",
+a:["Reusable bags","Single-use plastic bags","Littering"],
+correct:0
+}
+];
+
+let current=0;
+let score=0;
+let answered=false;
+
+function loadQuestion(){
+let q=questions[current];
+document.getElementById("question").innerText=q.q;
+document.getElementById("answers").innerHTML="";
+
+q.a.forEach((choice,index)=>{
+let btn=document.createElement("button");
+btn.innerText=choice;
+btn.onclick=()=>answer(index);
+document.getElementById("answers").appendChild(btn);
+});
+
+document.getElementById("quizMessage").innerText="";
+answered=false;
+}
+
+function answer(index){
+if(answered)return;
+answered=true;
+
+let q=questions[current];
+
+if(index===q.correct){
+score++;
+document.getElementById("quizMessage").innerText="Correct! Excellent! 🎉";
+}else{
+document.getElementById("quizMessage").innerText=
+"Not quite! Correct answer: "+q.a[q.correct];
+}
+
+document.getElementById("quizScore").innerText="Score: "+score;
+}
+
+function nextQuestion(){
+if(!answered){
+document.getElementById("quizMessage").innerText="Choose an answer first!";
+return;
+}
+
+current++;
+
+if(current>=questions.length){
+document.getElementById("question").innerText=
+"🎉 Quiz Completed!";
+
+document.getElementById("answers").innerHTML=
+"<h2>Your score: "+score+" / "+questions.length+"</h2>";
+
+document.getElementById("quizMessage").innerText=
+score>=6?"Amazing Eco Champion! 🌍":
+"Good try! Learn and play again! 💚";
+
+current=0;
+score=0;
+document.getElementById("quizScore").innerText="Score: 0";
+return;
+}
+
+loadQuestion();
+}
+
+loadQuestion();
+update();
+
+</script>
+
+</body>
+</html>
